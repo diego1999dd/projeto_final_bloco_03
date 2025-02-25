@@ -1,16 +1,17 @@
 import { MagnifyingGlass, ShoppingCart, User } from "@phosphor-icons/react";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
     <>
       <div className="flex w-full h-18 bg-green-800 justify-center">
         <div className="container flex p-5 justify-between">
-          <a href="" className="flex font-bold space-x-3 items-center">
+          <Link to="" className="flex font-bold space-x-3 items-center">
             <img src="images/farmacia_novo.png" alt="" className="w-17 h-15" />
             <h2 className="text-white font-extrabold font-display">
               Farmácia Quero DISCONTU
             </h2>
-          </a>
+          </Link>
           <div className="flex items-center gap-2">
             <div className="flex items-center rounded-full border-5 border-white">
               <input
@@ -27,13 +28,28 @@ function Navbar() {
           <div className="text-white">
             <ul className="flex space-x-3 ">
               <li>
-                <a href="">Produtos</a>
+                <Link
+                  to="/produtos"
+                  className="font-bold relative before:absolute before:bottom-0 before:left-0 before:w-0 before:h-1 before:bg-white before:transition-all before:duration-300 before:ease-in-out hover:before:w-full pb-2"
+                >
+                  Produtos
+                </Link>
               </li>
               <li>
-                <a href="">Categorias</a>
+                <Link
+                  to="/categorias"
+                  className="font-bold relative before:absolute before:bottom-0 before:left-0 before:w-0 before:h-1 before:bg-white before:transition-all before:duration-300 before:ease-in-out hover:before:w-full pb-2"
+                >
+                  Categorias
+                </Link>
               </li>
               <li>
-                <a href="">Cadastrar Categoria</a>
+                <Link
+                  to="/cadastrarcategoria"
+                  className="font-bold relative before:absolute before:bottom-0 before:left-0 before:w-0 before:h-1 before:bg-white before:transition-all before:duration-300 before:ease-in-out hover:before:w-full pb-2"
+                >
+                  Cadastrar Categoria
+                </Link>
               </li>
               <li>
                 <User size={32} />
