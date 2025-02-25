@@ -5,6 +5,9 @@ import ListaCategorias from "./components/categorias/listacategorias/ListaCatego
 import FormCategoria from "./components/categorias/formcategoria/FormCategoria";
 import DeletarCategoria from "./components/categorias/deletarcategoria/DeletarCategoria";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import DeletarProduto from "./components/produtos/deletarproduto/DeletarProduto";
+import FormProduto from "./components/produtos/formproduto/FormProduto";
+import ListarProdutos from "./components/produtos/listaprodutos/ListaProdutos";
 
 function App() {
   return (
@@ -25,6 +28,10 @@ function App() {
               path="/deletarcategoria/:id"
               element={<DeletarCategoria />}
             />
+            <Route path="/produtos" element={<ListarProdutos />} />
+            <Route path="/cadastrarproduto" element={<FormProduto />} />
+            <Route path="/editarproduto/:id" element={<FormProduto />} />
+            <Route path="/deletarproduto/:id" element={<DeletarProduto />} />
           </Routes>
         </div>
         <Footer />

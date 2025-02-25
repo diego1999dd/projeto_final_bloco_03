@@ -1,3 +1,6 @@
+import ListarProdutos from "../../components/produtos/listaprodutos/ListaProdutos";
+import ModalProduto from "../../components/produtos/modalpostagem/ModalProduto";
+
 function Home() {
   return (
     <>
@@ -12,17 +15,18 @@ function Home() {
             </p>
             <div
               className="
-                py-3 px-5 border-5 rounded-full bg-red-500 text-white
+                py-3 px-5 text-white
                 "
             >
-              Cadastrar Produto
+              <ModalProduto />
             </div>
           </div>
-          <div className="justify-center w-2/2">
+          <div className="justify-center w-170">
             <img src="/images/pharmacist-animate.svg" alt="" />
           </div>
         </div>
       </div>
+      <ListarProdutos />
     </>
   );
 }
